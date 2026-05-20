@@ -27,6 +27,7 @@ const UpdateCar = ({ data }) => {
   } = data;
 
   const onSubmit = async (e) => {
+    
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updatedCar = Object.fromEntries(formData.entries());
@@ -49,7 +50,6 @@ const UpdateCar = ({ data }) => {
       if (!res.ok) {
         throw new Error("Failed to update car");
       }
-
       const data = await res.json();
 
       if (data) {
