@@ -3,7 +3,6 @@
 A modern car rental booking application built with **Next.js**, **React**, **TailwindCSS**, **HeroUI**, and **Better-Auth** for authentication.  
 This app uses **JSON Web Tokens (JWT)** for secure session handling and integrates a booking system with driver options, notes, and duration control.
 
-
 ---
 
 ## ⚙️ Tech Stack
