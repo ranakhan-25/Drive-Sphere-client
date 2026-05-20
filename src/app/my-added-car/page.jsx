@@ -4,13 +4,12 @@ import CarCard from "@/components/shared/CarCard";
 
 const CarsPage = async ({ searchParams }) => {
 
-  // IMPORTANT
+ 
   const params = await searchParams;
 
   const search = params?.search || "";
   const type = params?.type || "";
 
-  // Fetch Data
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_SERVER_URL}/api/cars?search=${search}&type=${type}`,
     {
@@ -60,7 +59,7 @@ const CarsPage = async ({ searchParams }) => {
             <option value="Electric">Electric</option>
           </select>
 
-          {/* Button */}
+          
           <button
             type="submit"
             className="bg-black text-white px-6 py-3 rounded-xl"
