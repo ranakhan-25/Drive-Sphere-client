@@ -49,7 +49,7 @@ const DeleteCarBtn = ({ carId }) => {
       {/* Modal */}
       <AlertDialog.Backdrop>
         <AlertDialog.Container>
-          <AlertDialog.Dialog className="sm:max-w-[400px] rounded-2xl">
+          <AlertDialog.Dialog className="sm:max-w-100 rounded-2xl">
 
             {/* Close Button */}
             <AlertDialog.CloseTrigger />
