@@ -31,12 +31,12 @@ export default async function CarDetails({ params }) {
 
   return (
     <section className="max-w-6xl my-5 mx-auto px-6 py-16 bg-gray-50 dark:bg-gray-900 rounded-xl shadow-lg">
-      {/* Title */}
+      
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
         {car?.carName} Details
       </h2>
 
-      {/* Two Column Layout */}
+      
       <div className="md:grid md:grid-cols-2 md:gap-10 items-start">
         {/* Image */}
         {car?.imageUrl && (
@@ -76,7 +76,7 @@ export default async function CarDetails({ params }) {
             ${car?.dailyRentPrice}/day
           </p>
 
-          {/* Action Buttons */}
+          
           <div className="flex gap-4 mt-8">
             <BookNowBtn data={car} />
           </div>

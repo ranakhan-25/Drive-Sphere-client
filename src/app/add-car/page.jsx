@@ -11,7 +11,7 @@ import {
 import { toast } from "react-toastify";
 
 const page = () => {
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -40,6 +40,7 @@ const page = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12">
+      
       {/* Title & Short Description */}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
