@@ -30,17 +30,17 @@ const BookNowBtn = ({ data }) => {
   const [note, setNote] = useState("");
   const [days, setDays] = useState(1);
 
-  // Days Increment
+  
   const handleIncrement = () => {
     setDays((prev) => prev + 1);
   };
 
-  // Days Decrement
+  
   const handleDecrement = () => {
     setDays((prev) => (prev > 1 ? prev - 1 : 1));
   };
 
-  // Submit Booking
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -84,7 +84,6 @@ const BookNowBtn = ({ data }) => {
 
       toast.success(result.message || "Booking successful!");
     } catch (error) {
-      console.log(error);
       toast.error("Error booking car. Try again.");
     }
   };
@@ -92,7 +91,7 @@ const BookNowBtn = ({ data }) => {
   return (
     <Modal>
       {/* Trigger Button */}
-      <Button className="py-2 h-12 px-6 cursor-pointer rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+      <Button className="py-2 h-12 px-6 cursor-pointer rounded-lg bg-linear-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
         Book Now
       </Button>
 
