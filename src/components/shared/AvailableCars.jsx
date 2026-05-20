@@ -18,7 +18,7 @@ export default function AvailableCars() {
 
         const data = await res.json();
 
-        // শুধু AVAILABLE cars filter + 6টা limit
+        
         const availableCars = (data.payload || [])
           .filter((car) => car.availabilityStatus === "Available")
           .slice(0, 6);
