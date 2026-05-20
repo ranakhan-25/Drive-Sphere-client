@@ -37,7 +37,7 @@ const MyBookingPage = async () => {
               key={booking._id}
               className="w-full flex flex-col md:flex-row items-start gap-6 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition"
             >
-              {/* Image */}
+              
               {booking?.carImage && (
                 <Image
                   width={100}
@@ -48,7 +48,7 @@ const MyBookingPage = async () => {
                 />
               )}
 
-              {/* Info */}
+              
               <div className="flex-1 space-y-2 text-gray-700 dark:text-gray-300">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                   {booking?.name}
@@ -63,7 +63,7 @@ const MyBookingPage = async () => {
                   </p>
                 </div>
 
-                {/* Delete Button */}
+                
                 <DeleteBookingCar id={booking._id} />
               </div>
             </div>
