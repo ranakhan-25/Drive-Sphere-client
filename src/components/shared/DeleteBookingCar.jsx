@@ -43,7 +43,6 @@ const DeleteBookingCar = ({ id }) => {
       router.refresh();
 
     } catch (error) {
-      console.log(error);
 
       toast.error(
         "Error deleting booking. Try again."
@@ -95,7 +94,7 @@ const DeleteBookingCar = ({ id }) => {
                 Cancel
               </Button>
 
-              {/* Confirm Delete */}
+              
               <Button
                 onClick={handleDelete}
                 className="bg-red-600 text-white hover:bg-red-700"
