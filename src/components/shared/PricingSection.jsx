@@ -65,6 +65,8 @@ export default function PricingSection() {
                 <li key={i}>• {feature}</li>
               ))}
             </ul>
+
+            
             <button
               className={`px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 ${
                 plan.highlight
