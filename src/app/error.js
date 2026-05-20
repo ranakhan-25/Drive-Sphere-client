@@ -8,7 +8,7 @@ export default function ErrorPage() {
   const router = useRouter();
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-br from-red-600 via-pink-600 to-purple-700 text-white overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center h-screen bg-linear-to-br from-red-600 via-pink-600 to-purple-700 text-white overflow-hidden">
       
       {/* Floating Glow Effect */}
       <motion.div
@@ -53,13 +53,6 @@ export default function ErrorPage() {
           >
             Go Home
           </Link>
-
-          <button
-            onClick={() => router.refresh()}
-            className="px-6 py-2 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition"
-          >
-            Reload
-          </button>
         </motion.div>
       </div>
     </div>

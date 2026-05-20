@@ -29,10 +29,10 @@ export default function UserProfile() {
 
   return (
     <section className="max-w-3xl my-5 mx-auto px-6 py-10 bg-white dark:bg-gray-900 rounded-2xl shadow-lg">
-      {/* Header */}
+     
       <div className="flex flex-col md:flex-row items-center gap-6">
 
-        {/* Avatar */}
+        
         {image && (
           <Image
             width={100}

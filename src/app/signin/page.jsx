@@ -16,7 +16,9 @@ import { toast } from "react-toastify";
 import { authClient } from "@/lib/auth-client";
 
 const LoginPage = () => {
+
   const router = useRouter();
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
