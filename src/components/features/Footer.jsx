@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 py-12 border-t-2">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        {/* Contact Information */}
+       
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
           <p>Email: info@drivesphere.com</p>
@@ -14,7 +14,6 @@ export default function Footer() {
           <p>Address: Gouripur, Mymensingh, Bangladesh</p>
         </div>
 
-        {/* Useful Links */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Useful Links</h3>
           <ul className="space-y-2">

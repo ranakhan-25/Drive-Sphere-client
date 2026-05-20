@@ -34,7 +34,8 @@ export default function Navbar() {
     <nav className="sticky top-0 left-0 w-full backdrop-blur-md bg-linear-to-r from-indigo-400/30 to-pink-400/30 text-gray-900 dark:text-white shadow-md z-50 border-t-4 border-blue-500 rounded-t-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          
+          
           <Link href="/" className="flex items-center text-2xl font-bold">
             <FaCar className="mr-2 text-yellow-400" /> DriveSphere
           </Link>
