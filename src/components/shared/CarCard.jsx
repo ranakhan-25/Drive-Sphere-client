@@ -1,42 +1,11 @@
-// components/CarCard.jsx
 
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import UpdateCar from "./UpdateCar";
 import DeleteCarBtn from "./DeleteCarBtn";
 
 const CarCard = ({ car }) => {
-  const router = useRouter();
-
-  // Delete Function
-  const handleDelete = async (id) => {
-    const confirmDelete = confirm(
-      "Are you sure you want to delete this car?"
-    );
-
-    if (!confirmDelete) return;
-
-    try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/cars/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
-
-      const data = await res.json();
-
-      if (res.ok) {
-        alert(data.message || "Deleted Successfully");
-        router.refresh();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <div className="border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white">
