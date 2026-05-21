@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-6 lg:space-x-8 font-medium">
+          <ul onClick={() => setDropdownOpen(false)} className="hidden md:flex space-x-6 lg:space-x-8 font-medium">
             <NaveLink href="/">Home</NaveLink>
             <NaveLink href="/explore-cars">Explore Cars</NaveLink>
             <NaveLink href="/add-car">Add Car</NaveLink>
@@ -119,14 +119,24 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <Link
-                href="/signin"
-                className="px-4 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
+                <div className="flex items-center gap-3">
+                <Link
+                  href="/signin"
+                  className="px-4 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
                            hover:from-purple-300 hover:to-pink-300
                            active:scale-95 active:shadow-inner transition-all duration-300"
-              >
-                SignIn
-              </Link>
+                >
+                  SignIn
+                </Link>
+                <Link
+                  href="/register"
+                  className="px-4 py-2 rounded-lg border-2 font-semibold shadow-md
+                           
+                           active:scale-95 active:shadow-inner transition-all duration-300"
+                >
+                  SignUp
+                </Link>
+              </div>
             )}
 
             {/* theme toggled */}
@@ -167,22 +177,15 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 pb-4 space-y-2">
-          <ul onClick={() => setIsOpen(false)} className="md:hidden  flex flex-col gap-5 pt-2 font-medium">
-            <NaveLink href="/">
-              Home
-            </NaveLink>
-            <NaveLink href="/explore-cars">
-              Explore Cars
-            </NaveLink>
-            <NaveLink  href="/add-car">
-              Add Car
-            </NaveLink>
-            <NaveLink  href="/my-bookings">
-              My Bookings
-            </NaveLink>
-            <NaveLink  href="/my-added-car">
-              My Added Cars
-            </NaveLink>
+          <ul
+            onClick={() => setIsOpen(false)}
+            className="md:hidden  flex flex-col gap-5 pt-2 font-medium"
+          >
+            <NaveLink href="/">Home</NaveLink>
+            <NaveLink href="/explore-cars">Explore Cars</NaveLink>
+            <NaveLink href="/add-car">Add Car</NaveLink>
+            <NaveLink href="/my-bookings">My Bookings</NaveLink>
+            <NaveLink href="/my-added-car">My Added Cars</NaveLink>
           </ul>
 
           <div className="mt-9 flex gap-4 items-center">
@@ -233,13 +236,22 @@ export default function Navbar() {
                 </button>
               </div>
             ) : (
-              <div>
+                <div className="flex items-center gap-3">
                 <Link
                   onClick={() => setIsOpen(false)}
                   href="/signin"
                   className=" px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 font-semibold shadow-md active:scale-95 text-purple-600 active:shadow-inner transition-all duration-300"
                 >
                   Signin
+                  </Link>
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                  href="/register"
+                  className="px-4 py-2 rounded-lg border-2 font-semibold shadow-md
+                           
+                           active:scale-95 active:shadow-inner transition-all duration-300"
+                >
+                  SignUp
                 </Link>
               </div>
             )}
