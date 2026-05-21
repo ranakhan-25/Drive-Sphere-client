@@ -50,6 +50,7 @@ const LoginPage = () => {
       <h1 className="text-3xl font-medium my-3 text-blue-950">Sign In</h1>
       <Form className="flex sm:w-100 w-full flex-col gap-4" onSubmit={onSubmit}>
         <TextField
+           
           isRequired
           name="email"
           type="email"
@@ -61,7 +62,7 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input className={"shadow bg-white text-black"} placeholder="john@example.com" />
           <FieldError />
         </TextField>
         <TextField
@@ -83,7 +84,7 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Password</Label>
-          <Input placeholder="Enter your password" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter your password" />
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>

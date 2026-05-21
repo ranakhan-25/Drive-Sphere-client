@@ -41,9 +41,9 @@ const LoginPage = () => {
       provider: "google",
     });
     if (!data) {
-      toast.error("can't signin with google")
+      toast.error("can't signin with google");
     }
-    return router.push("/")
+    return router.push("/");
   };
 
   return (
@@ -63,7 +63,10 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Name</Label>
-          <Input placeholder="Enter your Name" />
+          <Input
+            className={"shadow bg-white text-black"}
+            placeholder="Enter your Name"
+          />
           <FieldError />
         </TextField>
         <TextField
@@ -78,7 +81,10 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input
+            className={"shadow bg-white text-black"}
+            placeholder="john@example.com"
+          />
           <FieldError />
         </TextField>
         <TextField
@@ -100,7 +106,10 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Password</Label>
-          <Input placeholder="Enter your password" />
+          <Input
+            className={"shadow bg-white text-black"}
+            placeholder="Enter your password"
+          />
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
@@ -118,7 +127,10 @@ const LoginPage = () => {
           }}
         >
           <Label className="text-black">Photo</Label>
-          <Input placeholder="Enter your Image Url" />
+          <Input
+            className={"shadow bg-white text-black"}
+            placeholder="Enter your Image Url"
+          />
           <FieldError />
         </TextField>
         <div className="">

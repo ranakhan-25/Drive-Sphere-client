@@ -61,13 +61,13 @@ const page = () => {
         <div className="md:grid grid-cols-2 gap-5">
           <TextField isRequired name="carName" type="text">
             <Label className="dark:text-blue-500">Car Name</Label>
-            <Input placeholder="Enter car Name" />
+            <Input className={"shadow bg-white text-black"} placeholder="Enter car Name" />
             <FieldError />
           </TextField>
 
           <TextField isRequired name="dailyRentPrice" type="number">
             <Label className="dark:text-blue-500">Price</Label>
-            <Input placeholder="Price..." />
+            <Input className={"shadow bg-white text-black"} placeholder="Price..." />
             <FieldError />
           </TextField>
         </div>
@@ -84,7 +84,7 @@ const page = () => {
           }
         >
           <Label className="dark:text-blue-500">Description</Label>
-          <Input placeholder="Enter description" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter description" />
           <FieldError />
         </TextField>
 
@@ -100,7 +100,7 @@ const page = () => {
           }
         >
           <Label className="dark:text-blue-500">Availability</Label>
-          <Input placeholder="Enter Availability" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter Availability" />
           <FieldError />
         </TextField>
 
@@ -113,25 +113,25 @@ const page = () => {
           }
         >
           <Label className="dark:text-blue-500">Image URL</Label>
-          <Input placeholder="Enter Image URL" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter Image URL" />
           <FieldError />
         </TextField>
 
         <TextField isRequired name="seatCapacity" type="number">
           <Label className="dark:text-blue-500">Capacity</Label>
-          <Input placeholder="Enter Capacity" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter Capacity" />
           <FieldError />
         </TextField>
 
         <TextField isRequired name="carType" type="text">
           <Label className="dark:text-blue-500">Type</Label>
-          <Input placeholder="Enter Car Type" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter Car Type" />
           <FieldError />
         </TextField>
 
         <TextField isRequired name="pickupLocation" type="text">
           <Label className="dark:text-blue-500">Location</Label>
-          <Input placeholder="Enter Location" />
+          <Input className={"shadow bg-white text-black"} placeholder="Enter Location" />
           <FieldError />
         </TextField>
 

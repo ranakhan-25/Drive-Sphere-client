@@ -27,6 +27,7 @@ export default function Navbar() {
     if (!result) {
       return toast.error("LogOut is not successfully");
     }
+    setDropdownOpen(false);
     return toast.success("LogOut successfully");
   };
 
@@ -34,8 +35,6 @@ export default function Navbar() {
     <nav className="sticky top-0 left-0 w-full backdrop-blur-md bg-linear-to-r from-indigo-400/30 to-pink-400/30 text-gray-900 dark:text-white shadow-md z-50 border-t-4 border-blue-500 rounded-t-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
-          
           <Link href="/" className="flex items-center text-2xl font-bold">
             <FaCar className="mr-2 text-yellow-400" /> DriveSphere
           </Link>
@@ -83,24 +82,28 @@ export default function Navbar() {
                 {dropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 text-black dark:text-white rounded shadow-lg">
                     <Link
+                      onClick={() => setDropdownOpen(false)}
                       href="/add-car"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                       Add Car
                     </Link>
                     <Link
+                      onClick={() => setDropdownOpen(false)}
                       href="/my-bookings"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                       My Bookings
                     </Link>
                     <Link
+                      onClick={() => setDropdownOpen(false)}
                       href="/my-added-car"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                       My Added Cars
                     </Link>
                     <Link
+                      onClick={() => setDropdownOpen(false)}
                       href="/profile"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
@@ -164,19 +167,28 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 pb-4 space-y-2">
-          <ul className="md:hidden  flex flex-col gap-5 pt-2 font-medium">
-            <NaveLink className="" href="/">
+          <ul onClick={() => setIsOpen(false)} className="md:hidden  flex flex-col gap-5 pt-2 font-medium">
+            <NaveLink href="/">
               Home
             </NaveLink>
-            <NaveLink href="/explore-cars">Explore Cars</NaveLink>
-            <NaveLink href="/add-car">Add Car</NaveLink>
-            <NaveLink href="/my-bookings">My Bookings</NaveLink>
-            <NaveLink href="/my-added-car">My Added Cars</NaveLink>
+            <NaveLink href="/explore-cars">
+              Explore Cars
+            </NaveLink>
+            <NaveLink  href="/add-car">
+              Add Car
+            </NaveLink>
+            <NaveLink  href="/my-bookings">
+              My Bookings
+            </NaveLink>
+            <NaveLink  href="/my-added-car">
+              My Added Cars
+            </NaveLink>
           </ul>
 
           <div className="mt-9 flex gap-4 items-center">
-            {session?.user ? (
+            {session?.user && (
               <Link
+                onClick={() => setIsOpen(false)}
                 href="/profile"
                 className="flex items-center gap-3 w-full rounded-xl bg-linear-to-r from-pink-200 to-blue-200 px-2 py-1 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
               >
@@ -207,9 +219,23 @@ export default function Navbar() {
                   </span>
                 </div>
               </Link>
+            )}
+
+            {session?.user ? (
+              <div className="space-y-2">
+                <button
+                  onClick={handelLogOut}
+                  className=" cursor-pointer px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
+                         
+                         active:scale-95 active:shadow-inner transition-all duration-300"
+                >
+                  Logout
+                </button>
+              </div>
             ) : (
               <div>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href="/signin"
                   className=" px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 font-semibold shadow-md active:scale-95 text-purple-600 active:shadow-inner transition-all duration-300"
                 >
@@ -217,17 +243,6 @@ export default function Navbar() {
                 </Link>
               </div>
             )}
-
-            <div className="space-y-2">
-              <button
-                onClick={handelLogOut}
-                className=" cursor-pointer px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
-                         
-                         active:scale-95 active:shadow-inner transition-all duration-300"
-              >
-                Logout
-              </button>
-            </div>
 
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

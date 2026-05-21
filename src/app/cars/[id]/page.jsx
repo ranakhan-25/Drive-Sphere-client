@@ -21,6 +21,7 @@ export default async function CarDetails({ params }) {
   const data = await res.json();
   const car = data?.payload;
 
+
   if (!car) {
     return (
       <section className="py-16 text-center text-gray-500 dark:text-gray-300">
