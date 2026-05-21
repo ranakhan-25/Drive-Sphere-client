@@ -130,8 +130,8 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/register"
-                  className="px-4 py-2 rounded-lg border-2 font-semibold shadow-md
-                           
+                  className="px-4 py-2 rounded-lg border-2 font-semibold shadow-md sm:hidden lg:inline-block
+                             
                            active:scale-95 active:shadow-inner transition-all duration-300"
                 >
                   SignUp
