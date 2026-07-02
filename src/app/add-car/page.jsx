@@ -11,6 +11,9 @@ import {
 import { toast } from "react-toastify";
 
 const page = () => {
+  const { data: session } = authClient.useSession()
+  const userId = session?.user?.id;
+
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +22,17 @@ const page = () => {
 
     const { data, error } = await authClient.token();
 
+   
+
+    const newData = {
+      ...carData,
+
+      userId:userId,
+      
+    }
+
+    if (!userId) return
+    
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/add-car`,
       {
@@ -27,14 +41,14 @@ const page = () => {
           "Content-Type": "application/json",
           authorization: `Bearer ${data?.token}`,
         },
-        body: JSON.stringify(carData),
+        body: JSON.stringify(newData),
       },
     );
 
     const result = await res.json();
 
     if (result) {
-      toast(result.message);
+      toast(result.message); 
     }
   };
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function LoadingPage() {
   return (
     <div className=" flex flex-col items-center justify-center h-screen  overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-screen bg-linear-to-br from-indigo-600 via-purple-600 to-pink-600 text-white">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-screen ">
         
         <motion.div
           className="w-20 h-20 border-4 border-yellow-400 border-t-transparent rounded-full"

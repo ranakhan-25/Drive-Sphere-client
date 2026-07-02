@@ -5,7 +5,7 @@ import { FaCarCrash } from "react-icons/fa";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-linear-to-r from-indigo-600 to-purple-700 text-white text-center">
+    <div className="flex flex-col items-center justify-center h-screen text-center">
       
       {/* Animated Icon */}
       <motion.div

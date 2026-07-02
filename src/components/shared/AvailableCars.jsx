@@ -93,7 +93,7 @@ export default function AvailableCars() {
 
               <Link
                 href={`/cars/${car._id}`}
-                className="inline-block px-4 py-2 rounded-lg bg-linear-to-r from-pink-300 to-blue-300 font-semibold hover:scale-105 transition"
+                className="inline-block px-4 py-2 rounded-lg bg-[#e6bcf3] font-semibold hover:scale-105 transition"
               >
                 View Details
               </Link>

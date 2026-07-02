@@ -29,7 +29,7 @@ export default function Banner() {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Find Your <span className="text-pink-300">Perfect Ride</span>
+            Find Your <span className="text-[#e6bcf3]">Perfect Ride</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-200">
@@ -41,7 +41,7 @@ export default function Banner() {
 
             <Link
               href="/explore-cars"
-              className="inline-block px-6 py-3 rounded-xl bg-linear-to-r from-indigo-400 to-pink-400 text-black font-semibold shadow-lg hover:scale-105 transition duration-300"
+              className="inline-block px-6 py-3 rounded-xl bg-[#e6bcf3] text-black font-semibold shadow-lg hover:scale-105 transition duration-300"
             >
               Explore Cars
             </Link>

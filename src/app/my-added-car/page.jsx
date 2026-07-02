@@ -1,9 +1,17 @@
 // app/cars/page.jsx
 
 import CarCard from "@/components/shared/CarCard";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 const CarsPage = async ({ searchParams }) => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  const userId = session?.user?.id;
+  
 
+  console.log(userId)
  
   const params = await searchParams;
 
@@ -11,7 +19,7 @@ const CarsPage = async ({ searchParams }) => {
   const type = params?.type || "";
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/api/cars?search=${search}&type=${type}`,
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/api/cars/?userId=${userId}&search=${search}&type=${type}`,
     {
       cache: "no-store",
     }

@@ -74,7 +74,7 @@ export default async function ExploreCars({ searchParams }) {
         />
         <button
           type="submit"
-          className="ml-3 px-4 py-2 rounded-lg bg-linear-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+          className="ml-3 px-4 py-2 rounded-lg bg-[#e6bcf3] text-[#910bba] font-semibold shadow-md transition-all duration-300"
         >
           Search
         </button>
@@ -112,7 +112,7 @@ export default async function ExploreCars({ searchParams }) {
                 </p>
                 <Link
                   href={`/cars/${car._id}`}
-                  className="inline-block px-4 py-2 rounded-lg bg-linear-to-r from-indigo-300 to-pink-300 text-white font-semibold shadow-md hover:from-purple-600 hover:to-pink-600 active:scale-95 active:shadow-inner transition-all duration-300"
+                  className="inline-block px-4 py-2 rounded-lg bg-[#e6bcf3] font-semibold shadow-md  active:scale-95 active:shadow-inner transition-all duration-300"
                 >
                   View Details
                 </Link>
@@ -152,7 +152,7 @@ export default async function ExploreCars({ searchParams }) {
               href={`?search=${params?.search || ""}&page=${p}`}
               className={`px-3 py-2 rounded-lg border ${
                 page === p
-                  ? "bg-indigo-600 text-white border-indigo-600"
+                  ? "bg-[#e6bcf3]"
                   : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-indigo-100 dark:hover:bg-gray-700"
               }`}
             >
@@ -165,7 +165,7 @@ export default async function ExploreCars({ searchParams }) {
         {page < totalPages && (
           <Link
             href={`?search=${params?.search || ""}&page=${page + 1}`}
-            className="px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-indigo-100 dark:hover:bg-gray-600 transition"
+            className="px-3 py-2 rounded-lg bg-[#e6bcf3] transition"
           >
             →
           </Link>

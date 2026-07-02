@@ -8,7 +8,7 @@ export default function ErrorPage() {
   const router = useRouter();
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-linear-to-br from-red-600 via-pink-600 to-purple-700 text-white overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center h-screen bg-[#e6bcf3] overflow-hidden">
       
       {/* Floating Glow Effect */}
       <motion.div

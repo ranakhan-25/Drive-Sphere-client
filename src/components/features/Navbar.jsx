@@ -32,11 +32,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 left-0 w-full backdrop-blur-md bg-linear-to-r from-indigo-400/30 to-pink-400/30 text-gray-900 dark:text-white shadow-md z-50 border-t-4 border-blue-500 rounded-t-md">
+    <nav className="sticky top-0 left-0 w-full backdrop-blur-md bg-linear-to-r from-indigo-400/30 to-pink-400/30 text-gray-900 dark:text-white shadow-md z-50  rounded-t-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center text-2xl font-bold">
-            <FaCar className="mr-2 text-yellow-400" /> DriveSphere
+            <FaCar className="mr-2 text-[#e6bcf3]" /> DriveSphere
           </Link>
 
           {/* Desktop Menu */}
@@ -53,7 +53,7 @@ export default function Navbar() {
               <div className="relative ">
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center gap-3 rounded-full bg-gradient-to-r from-pink-200 to-blue-200 px-2 py-1 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                  className="flex items-center gap-3 rounded-full bg-gradient-to-r from-pink-200 to-blue-50 px-2 py-1 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
                 >
                   <div className="relative w-10 h-10 flex items-center justify-center rounded-full overflow-hidden bg-white border-2 border-white">
                     {session?.user?.image ? (
@@ -122,8 +122,8 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                 <Link
                   href="/signin"
-                  className="px-4 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
-                           hover:from-purple-300 hover:to-pink-300
+                  className="px-4 py-2 rounded-lg bg-[#e6bcf3] text-[#a411d0] font-semibold shadow-md
+                           
                            active:scale-95 active:shadow-inner transition-all duration-300"
                 >
                   SignIn
@@ -142,8 +142,7 @@ export default function Navbar() {
             {/* theme toggled */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="cursor-pointer py-2 px-2  rounded-full bg-linear-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md
-                         hover:from-purple-600 hover:to-pink-600
+              className="cursor-pointer py-2 px-2  rounded-full  text-white font-semibold shadow-md
                          active:scale-95 active:shadow-inner transition-all duration-300"
             >
               {mounted ? (
@@ -193,7 +192,7 @@ export default function Navbar() {
               <Link
                 onClick={() => setIsOpen(false)}
                 href="/profile"
-                className="flex items-center gap-3 w-full rounded-xl bg-linear-to-r from-pink-200 to-blue-200 px-2 py-1 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
+                className="flex items-center gap-3 w-full rounded-xl bg-linear-to-r from-pink-200 to-blue-50 px-2 py-1 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
               >
                 {/* Avatar */}
                 <div className="relative w-11 h-11 flex items-center justify-center rounded-full overflow-hidden bg-white border-2 border-white shrink-0">
@@ -228,7 +227,7 @@ export default function Navbar() {
               <div className="space-y-2">
                 <button
                   onClick={handelLogOut}
-                  className=" cursor-pointer px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 text-purple-600 font-semibold shadow-md
+                  className=" cursor-pointer px-5 py-2 rounded-lg bg-[#e6bcf3] font-semibold shadow-md
                          
                          active:scale-95 active:shadow-inner transition-all duration-300"
                 >
@@ -240,7 +239,7 @@ export default function Navbar() {
                 <Link
                   onClick={() => setIsOpen(false)}
                   href="/signin"
-                  className=" px-5 py-2 rounded-lg bg-linear-to-r from-indigo-200 to-purple-200 font-semibold shadow-md active:scale-95 text-purple-600 active:shadow-inner transition-all duration-300"
+                  className=" px-5 py-2 rounded-lg bg-[#e6bcf3] font-semibold shadow-md active:scale-95 text-purple-600 active:shadow-inner transition-all duration-300"
                 >
                   Signin
                   </Link>
@@ -258,8 +257,8 @@ export default function Navbar() {
 
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="cursor-pointer py-2 px-2  rounded-full bg-linear-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md
-                         hover:from-purple-600 hover:to-pink-600
+              className="cursor-pointer py-2 px-2  rounded-full  text-white font-semibold shadow-md
+                         
                          active:scale-95 active:shadow-inner transition-all duration-300"
             >
               {mounted ? (

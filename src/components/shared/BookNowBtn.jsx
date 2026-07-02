@@ -91,7 +91,7 @@ const BookNowBtn = ({ data }) => {
   return (
     <Modal>
       {/* Trigger Button */}
-      <Button className="py-2 h-12 px-6 cursor-pointer rounded-lg bg-linear-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-md hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+      <Button className="py-2 h-12 px-6 cursor-pointer rounded-lg bg-[#e6bcf3] text-[#830ea7] font-semibold shadow-md  transition-all duration-300">
         Book Now
       </Button>
 
